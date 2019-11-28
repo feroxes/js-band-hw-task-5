@@ -1,6 +1,12 @@
-# Ciklum University: JS Band Internship. Homework task 4
+# Ciklum University: JS Band Internship. Homework task 5
 
-<a href="https://feroxes.github.io/js-band-hw-task-4/">Demo</a>
+<a href="https://feroxes.github.io/js-band-hw-task-5/">Demo</a>
+
+## To install project
+
+`git clone` - clone this repo
+
+`npm install || yarn` - install packages
 
 ## Scripts description
 
