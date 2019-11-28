@@ -8,15 +8,9 @@ branches:
   only:
     - master
 
-before_install:
-  - git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
-
-install:
-  - yarn
-
 script:
-  - yarn ci:eslint
-  - yarn ci:build
+  - npm run eslint
+  - npm run build
 
 deploy:
   provider: pages
