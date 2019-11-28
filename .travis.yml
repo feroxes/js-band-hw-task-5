@@ -1,0 +1,28 @@
+language: node_js
+node_js: "12"
+cache:
+  directories:
+    - node_modules
+
+branches:
+  only:
+    - master
+
+before_install:
+  - git remote set-url origin "https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
+
+install:
+  - yarn
+
+script:
+  - yarn ci:eslint
+  - yarn ci:build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
+  keep_history: true
+  on:
+    branch: master
